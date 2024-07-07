@@ -3,6 +3,7 @@ import {CssBaseline} from "@mui/material";
 import {useEffect, useState} from "react";
 import buildHasuraProvider from 'ra-data-hasura';
 import {MenuList} from "./modules/menu/components/menu-list/menu-list";
+import {MenuEdit} from "./modules/menu/components/menu-edit/menu-edit";
 
 export const App = () => {
 
@@ -25,7 +26,7 @@ export const App = () => {
       <>
         <CssBaseline/>
             <Admin dataProvider={dataProvider}>
-                <Resource name="menu" list={MenuList}/>
+                <Resource name="menu" list={MenuList} edit={MenuEdit}/>
             </Admin>
       </>
 
